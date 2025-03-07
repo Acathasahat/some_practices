@@ -11,7 +11,6 @@ if not file_name.endswith('.csv'):
 with open(file_name,'w+',encoding='utf-8',newline='') as f:
     fieldnames = ['Name','Age','City']
     writer = csv.DictWriter(f,fieldnames = fieldnames) #DictWriter()创建了一个对象
-    writer.writeheader()
     while True:
         row_d = input('Enter the data in the order of name, age and city: ')
         if row_d.lower() == 'done': break
